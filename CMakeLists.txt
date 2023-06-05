@@ -2,18 +2,22 @@ cmake_minimum_required(VERSION 3.10.0)
 
 project(segment_vector)
 
+include_directories(
+    ./include/
+)
+
 set(CMAKE_CXX_STANDARD 11)
 
 set(ACC_TEST_SOURCES 
-        acc_test.cc
+        ./test/acc_test.cc
 )
 
 set(SPEED_TEST_SOURCES
-        speed_test.cc
+        ./test/speed_test.cc
 )
 
 set(HEADERS
-        segment_vector.h
+        ./include/segment_vector.h
 )
 
 add_executable(acc_test ${ACC_TEST_SOURCES})
